@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ATARAYO × 名古屋ECO動物海洋専門学校 — 広報支援ご提案</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/black.css" id="theme">
+<style>
+:root{
+  --navy:#0D1B2A;
+  --navy-mid:#1A2F47;
+  --navy-light:#253D57;
+  --gold:#C9A84C;
+  --gold-light:#E8C96A;
+  --white:#F5F5F5;
+  --gray:#B0B8C1;
+  --accent:#3A9BD5;
+  --danger:#E85D5D;
+}
+html,body{background:var(--navy);}
+.reveal{font-family:'Hiragino Kaku Gothic ProN','Meiryo',sans-serif;color:var(--white);font-size:20px;}
+.reveal .slides{text-align:left;}
+.reveal .slides section{padding:22px 44px 16px;height:100%;box-sizing:border-box;background:var(--navy);color:var(--white);overflow:hidden;}
+.reveal h1,.reveal h2,.reveal h3,.reveal h4{color:var(--white);font-family:inherit;text-transform:none;letter-spacing:0;text-align:left;margin:0 0 8px 0;font-weight:700;line-height:1.25;}
+.reveal h2{font-size:1.5em;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:7px;margin-bottom:12px;}
+.reveal h2 .gold{color:var(--gold);}
+.reveal p,.reveal li{line-height:1.5;font-size:1em;}
+.reveal ul{list-style:none;margin:0;padding:0;}
+.reveal ul li{padding:2px 0 2px 18px;position:relative;}
+.reveal ul li::before{content:"▸";color:var(--gold);position:absolute;left:0;}
+.reveal table{width:100%;border-collapse:collapse;font-size:0.9em;margin:5px 0;}
+.reveal th,.reveal td{border:1px solid rgba(255,255,255,0.1);padding:7px 10px;text-align:left;vertical-align:top;}
+.reveal th{background:var(--navy-light);color:var(--gold-light);font-weight:700;}
+.reveal td:first-child{background:rgba(255,255,255,0.03);font-weight:600;}
+.reveal section.title-slide{padding:60px 80px;}
+.slide-number{color:var(--gray);}
+
+/* core UI parts (per spec) */
+.card{background:var(--navy-mid);border-left:4px solid var(--gold);border-radius:6px;padding:12px 16px;margin:6px 0;}
+.card-blue{background:var(--navy-mid);border-left:4px solid var(--accent);border-radius:6px;padding:12px 16px;margin:6px 0;}
+.card-danger{background:rgba(232,93,93,0.08);border-left:4px solid var(--danger);border-radius:6px;padding:12px 16px;margin:6px 0;}
+.card h3,.card-blue h3,.card-danger h3{font-size:1em;margin-bottom:6px;color:var(--gold-light);}
+.card-blue h3{color:#9BD0F0;}
+.card-danger h3{color:#F2A0A0;}
+
+.quote-box{background:rgba(201,168,76,0.08);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 18px;font-style:italic;font-size:0.95em;color:var(--gold-light);margin:6px 0;line-height:1.5;}
+.quote-source{font-size:0.82em;color:var(--gray);font-style:normal;margin-top:4px;}
+
+.highlight-box{background:rgba(201,168,76,0.15);border:1px solid var(--gold);border-radius:8px;padding:12px 20px;margin:12px 0;text-align:center;}
+.highlight-box .main-message{font-size:1.15em;font-weight:bold;color:var(--gold-light);line-height:1.5;}
+
+.danger-box{background:rgba(232,93,93,0.1);border:1px solid var(--danger);border-radius:8px;padding:12px 18px;margin:10px 0;font-size:0.9em;}
+
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
+.grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;}
+
+.flow-steps{display:flex;align-items:center;gap:8px;margin:10px 0;}
+.flow-step{background:var(--navy-mid);border:1px solid var(--gold);border-radius:6px;padding:10px 12px;text-align:center;font-size:0.85em;flex:1;}
+.flow-step .step-num{color:var(--gold);font-size:0.85em;display:block;margin-bottom:2px;}
+.flow-arrow{color:var(--gold);font-size:1.2em;flex-shrink:0;}
+
+.plan-card{border-radius:8px;padding:14px;text-align:center;}
+.plan-card h3{font-size:1.05em;margin-bottom:6px;}
+.plan-card .price{color:var(--gold-light);font-size:1.05em;font-weight:bold;margin:6px 0 8px;}
+.plan-card .tagline{color:var(--gray);font-size:0.88em;margin-bottom:8px;}
+.plan-card ul{text-align:left;font-size:0.88em;}
+.plan-ume{background:var(--navy-mid);border:1px solid var(--gray);}
+.plan-take{background:var(--navy-light);border:1px solid var(--accent);}
+.plan-matsu{background:rgba(201,168,76,0.12);border:2px solid var(--gold);}
+
+.peso-card{border-radius:6px;padding:12px 14px;}
+.peso-card h3{font-size:1em;margin-bottom:6px;}
+.peso-active{background:rgba(58,155,213,0.15);border:1px solid var(--accent);}
+.peso-empty{background:rgba(232,93,93,0.08);border:2px dashed var(--danger);}
+.peso-card ul{font-size:0.88em;}
+
+.before-card{background:rgba(176,184,193,0.1);border:1px solid var(--gray);border-radius:8px;padding:16px;}
+.after-card{background:rgba(201,168,76,0.12);border:2px solid var(--gold);border-radius:8px;padding:16px;}
+.before-card h3{color:var(--gray);}
+.after-card h3{color:var(--gold-light);}
+
+.citation-flow{display:flex;flex-direction:column;align-items:center;gap:2px;}
+.citation-node{border-radius:5px;padding:6px 14px;text-align:center;font-size:0.8em;width:400px;background:var(--navy-mid);border:1px solid var(--gold);line-height:1.4;}
+.citation-node.gold-fill{background:var(--gold);color:var(--navy);font-weight:600;border:1px solid var(--gold);}
+.citation-node.accent-border{border-color:var(--accent);}
+.citation-node.accent-fill{background:var(--accent);color:#fff;border-color:var(--accent);}
+.citation-node.gold-strong{background:var(--gold);color:var(--navy);font-weight:700;border:2px solid var(--gold-light);}
+.citation-arrow-down{color:var(--gold);font-size:1em;line-height:1;margin:0;}
+
+.trust-bar-wrap{margin:5px 0;}
+.trust-bar-label{font-size:0.88em;color:var(--white);margin-bottom:3px;}
+.trust-bar-bg{background:rgba(255,255,255,0.1);border-radius:4px;height:24px;width:100%;position:relative;overflow:hidden;}
+.trust-bar-fill{height:100%;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:0.82em;font-weight:bold;}
+.trust-bar-earned{background:var(--gold);color:var(--navy);}
+.trust-bar-ad{background:var(--accent);color:#fff;}
+.trust-bar-web{background:var(--gray);color:var(--navy);}
+
+.badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:0.72em;font-weight:bold;padding:2px 8px;border-radius:12px;margin-left:6px;vertical-align:middle;}
+.badge-blue{display:inline-block;background:var(--accent);color:#fff;font-size:0.72em;font-weight:bold;padding:2px 8px;border-radius:12px;margin-left:6px;vertical-align:middle;}
+.badge-red{display:inline-block;background:var(--danger);color:#fff;font-size:0.72em;font-weight:bold;padding:2px 8px;border-radius:12px;margin-left:6px;vertical-align:middle;}
+
+.bottom-note{background:rgba(255,255,255,0.05);border-radius:4px;padding:8px 14px;font-size:0.85em;color:var(--gray);margin-top:10px;line-height:1.5;}
+.slide-header{font-size:0.7em;color:var(--gray);margin-bottom:10px;letter-spacing:0.1em;text-transform:uppercase;}
+
+.gold{color:var(--gold);}
+.gold-bold{color:var(--gold);font-weight:bold;font-size:1.1em;}
+.gold-light{color:var(--gold-light);}
+.accent{color:var(--accent);}
+.danger{color:var(--danger);}
+.gray{color:var(--gray);font-size:0.9em;}
+.center{text-align:center;}
+.small{font-size:0.88em;}
+.tiny{font-size:0.78em;}
+
+/* cover */
+.cover-eyebrow{font-size:0.8em;color:var(--gray);letter-spacing:0.18em;margin-bottom:50px;}
+.cover-tagline{font-size:2.6em;color:var(--gold-light);font-weight:700;line-height:1.3;margin-bottom:24px;}
+.cover-sub{font-size:1.05em;color:var(--white);margin-bottom:40px;}
+.cover-to{font-size:1.5em;color:var(--gold);margin-bottom:24px;font-weight:600;}
+.cover-meta{font-size:0.88em;color:var(--gray);line-height:1.7;}
+
+/* part divider for slide-header */
+.slide-h2-row{display:flex;justify-content:space-between;align-items:baseline;}
+
+/* small helpers */
+.kv{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:0.92em;}
+.steps-4{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.step-item{background:var(--navy-mid);border-left:3px solid var(--gold);border-radius:6px;padding:10px 14px;font-size:0.9em;}
+.step-item .num{color:var(--gold);font-weight:bold;}
+
+/* table compact variant */
+table.compact{font-size:0.84em;}
+table.compact th,table.compact td{padding:6px 9px;}
+
+/* roadmap year card */
+.year-card{border-radius:8px;padding:14px;height:100%;}
+.year-card h3{font-size:1em;margin-bottom:6px;}
+.year-gold{background:rgba(201,168,76,0.15);border:1px solid var(--gold);}
+.year-accent{background:rgba(58,155,213,0.12);border:1px solid var(--accent);}
+.year-white{background:rgba(255,255,255,0.06);border:1px solid var(--gray);}
+.year-gold h3{color:var(--gold-light);}
+.year-accent h3{color:#9BD0F0;}
+.year-white h3{color:var(--white);}
+
+/* faq table */
+.faq-table th:first-child{width:30%;}
+
+/* outcome layered */
+.layer{border-radius:6px;padding:10px 14px;margin:7px 0;}
+.layer-outcome{background:rgba(201,168,76,0.18);border-left:6px solid var(--gold);}
+.layer-output{background:rgba(58,155,213,0.12);border-left:6px solid var(--accent);}
+.layer-input{background:var(--navy-mid);border-left:6px solid var(--gray);}
+.layer h3{font-size:1em;margin-bottom:4px;}
+.layer p{font-size:0.88em;margin:0;color:var(--white);}
+
+/* ai-bubble */
+.ai-bubble{border-radius:14px;padding:10px 14px;margin:6px 0;font-size:0.9em;line-height:1.5;}
+.ai-bubble-gray{background:rgba(176,184,193,0.15);border:1px solid var(--gray);color:var(--white);}
+.ai-bubble-gold{background:rgba(201,168,76,0.15);border:1px solid var(--gold);color:var(--gold-light);}
+
+/* check list */
+.check-list li::before{content:"✅";color:var(--gold);}
+.warn-list li::before{content:"⚠";color:var(--danger);}
+
+/* detail text — supporting info, secondary visual weight */
+.detail{font-size:0.72em;color:var(--gray);line-height:1.35;margin-top:3px;}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 01 COVER -->
+<section data-screen-label="01 表紙" class="title-slide">
+  <div class="cover-eyebrow">ATARAYO × 名古屋ECO動物海洋専門学校</div>
+  <div class="cover-tagline">選ばれる学校への航路を、<br>一緒に描く</div>
+  <div class="cover-sub">広報支援ご提案</div>
+  <div class="cover-to">名古屋ECO動物海洋専門学校 様</div>
+  <div class="cover-meta">2026年4月27日（月）13:00〜14:00<br>株式会社ATARAYO 代表 関口陽介 / 担当 橋本花織</div>
+</section>
+
+<!-- 02 富田様からお聞きしたこと -->
+<section data-screen-label="02 富田様のお言葉">
+  <div class="slide-header">01 / 今日のご提案のベースにあるもの</div>
+  <h2>先日のお話で、<span class="gold">3つの課題</span>が見えてきました</h2>
+  <div class="quote-box">
+    「全体像をもう一度整理しないといけない。各施策の目的と手段がバラバラになっている気がする」
+    <div class="quote-source">— 富田様のお言葉(2026年4月13日)</div>
+  </div>
+  <div class="quote-box">
+    「テレビとかってやっぱり弱い部分。保護者にアタックできるといいと思っている」
+    <div class="quote-source">— 富田様のお言葉(2026年4月13日)</div>
+  </div>
+  <div class="quote-box">
+    「高校18歳がどんどん減ってくる。分野を広げながら対応していく必要がある」
+    <div class="quote-source">— 富田様のお言葉(2026年4月13日)</div>
+  </div>
+</section>
+
+<!-- 03 御校の宝ともったいない -->
+<section data-screen-label="03 宝ともったいない">
+  <div class="slide-header">02 / 御校の現状認識</div>
+  <h2>素材は揃っている。<span class="gold">届いていない</span>だけ</h2>
+  <div class="grid-2">
+    <div class="card-blue">
+      <h3>御校の「宝」 — ブログ245記事全件を読んで確認</h3>
+      <ul>
+        <li>就職率100%・20年連続</li>
+        <li>マイクロソフト×AI×動物園 優秀賞</li>
+        <li>ウミガメ保全×トヨタ自動車HOURYU</li>
+        <li>海洋系は愛知県で唯一の学校</li>
+        <li>栄のど真ん中に200種の動物</li>
+        <li>Instagram 愛知動物系フォロワー1位(3,298人)</li>
+      </ul>
+    </div>
+    <div class="card-danger">
+      <h3>外の世界には届いていない ⚠</h3>
+      <ul>
+        <li>マイクロソフト優秀賞 → メディア掲載ゼロ</li>
+        <li>ウミガメ×トヨタ → 環境系メディア未達</li>
+        <li>保護猫の譲渡活動 → 中日新聞未掲載</li>
+        <li>就職率100%×20年 → 保護者媒体に未掲載</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message">「御校には素材がある。足りないのは『届ける仕組み』だけです。」</div>
+    <p class="detail" style="margin-top:6px;">— ブログ245記事全件を読んで行き着いた結論</p>
+  </div>
+</section>
+
+<!-- 04 環境変化 -->
+<section data-screen-label="04 環境変化">
+  <div class="slide-header">03 / 環境変化</div>
+  <h2>高校生と保護者の「学校の調べ方」が<span class="gold">根本的に変わった</span></h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>2020年まで</h3>
+      <ul>
+        <li>Google検索でキーワード検索</li>
+        <li>進学サイトを閲覧</li>
+        <li>オープンキャンパスに行って決める</li>
+        <li>パンフレット・HP中心</li>
+      </ul>
+    </div>
+    <div class="card-blue" style="border-left-color:var(--gold);">
+      <h3 style="color:var(--gold-light);">2025年以降</h3>
+      <ul>
+        <li>ChatGPT・Gemini・Perplexityで学校を質問</li>
+        <li>AI検索から情報を得る高校生・保護者が急増</li>
+        <p class="detail">AI利用者:2026年末に3,175万人見込み(MM総研)</p>
+        <li><span class="gold-bold">⭐ AI検索「選ばれる学校」と「そうでない学校」に二極化</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="danger-box">
+    🚨 <strong>問題:</strong> AIは「学校の自己発信(HP)」より<span class="gold">「第三者の報道・口コミ」</span>を優先参照します。<br>
+    御校はどちらが多いでしょうか?
+  </div>
+</section>
+
+<!-- 05 サイテーション① -->
+<section data-screen-label="05 サイテーション 1">
+  <div class="slide-header">04-a / サイテーション(外部言及)を理解する</div>
+  <h2>AIに選ばれるカギは「<span class="gold">誰かに語ってもらうこと</span>」</h2>
+  <div class="highlight-box" style="text-align:left;">
+    <div style="font-size:0.78em;color:var(--gray);margin-bottom:4px;">サイテーション(Citation)とは:</div>
+    <div class="main-message" style="font-size:1em;">外部サイト・メディア・口コミで「学校名・取り組みが言及・引用されている状態」</div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>「自己発信」と「外部言及」の違い</h3>
+      <table class="compact">
+        <tr><th></th><th>自己発信</th><th>外部言及</th></tr>
+        <tr><td>誰が言う?</td><td>学校自身</td><td>第三者</td></tr>
+        <tr><td>AIの扱い</td><td>信頼度低</td><td class="gold">優先採用</td></tr>
+        <tr><td>保護者の印象</td><td>「自分で言ってるだけ」</td><td>「認められている」</td></tr>
+        <tr><td>蓄積</td><td>更新で消える</td><td class="gold">半永久的に残る</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>メディア別の消費者信頼度(Nielsen調査)</h3>
+      <div class="trust-bar-wrap">
+        <div class="trust-bar-label">第三者の報道記事</div>
+        <div class="trust-bar-bg"><div class="trust-bar-fill trust-bar-earned" style="width:70%;">70%</div></div>
+      </div>
+      <div class="trust-bar-wrap">
+        <div class="trust-bar-label">テレビ・新聞広告</div>
+        <div class="trust-bar-bg"><div class="trust-bar-fill trust-bar-ad" style="width:62%;">62%</div></div>
+      </div>
+      <div class="trust-bar-wrap">
+        <div class="trust-bar-label">SNS・ブログ</div>
+        <div class="trust-bar-bg"><div class="trust-bar-fill trust-bar-web" style="width:58%;">58%</div></div>
+      </div>
+      <div class="trust-bar-wrap">
+        <div class="trust-bar-label">Web広告</div>
+        <div class="trust-bar-bg"><div class="trust-bar-fill trust-bar-web" style="width:47%;">47%</div></div>
+      </div>
+      <p class="detail" style="margin-top:6px;">報道記事は広告の<span class="gold">約1.5倍</span>の信頼度</p>
+    </div>
+  </div>
+</section>
+
+<!-- 06 サイテーション② AI検索フロー -->
+<section data-screen-label="06 サイテーション 2">
+  <div class="slide-header">04-b / AI検索のメカニズム(図解)</div>
+  <h2>メディアに載ることが「AIに選ばれること」に<span class="gold">つながる仕組み</span></h2>
+  <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:18px;align-items:start;">
+    <div class="citation-flow">
+      <div class="citation-node">御校の取り組み(日々の教育・プロジェクト実績)</div>
+      <div class="citation-arrow-down">▼</div>
+      <div class="citation-node">プレスリリース配信 / メディアアプローチ</div>
+      <div class="citation-arrow-down">▼</div>
+      <div class="citation-node gold-fill">新聞・テレビ・Webメディアに「掲載記事」が生まれる</div>
+      <div class="citation-arrow-down">▼</div>
+      <div class="citation-node accent-border">Web上に「御校を語る第三者の情報」が蓄積 = サイテーション</div>
+      <div class="citation-arrow-down">▼</div>
+      <div class="citation-node accent-fill">生成AI(ChatGPT・Gemini・Perplexity)が学習・参照</div>
+      <div class="citation-arrow-down">▼</div>
+      <div class="citation-node gold-strong">AIに聞かれたとき、御校の名前が回答に登場する<br>= AI検索で「選ばれる学校」になる</div>
+    </div>
+    <div>
+      <div class="card-blue" style="padding:12px 14px;margin:4px 0;">
+        <h3 style="font-size:0.85em;">📊 Brightedge(2024)</h3>
+        <p class="detail">AI回答の<span class="gold-bold">約63%</span>は検索上位10位以外を引用 → SEO対策だけでは不十分</p>
+      </div>
+      <div class="card-blue" style="padding:12px 14px;margin:4px 0;">
+        <h3 style="font-size:0.85em;">📊 AI検索からのWeb流入</h3>
+        <p class="detail">2025年1月比で<span class="gold-bold">約145倍増</span> (Ahrefs調査)</p>
+      </div>
+      <div class="card-blue" style="padding:12px 14px;margin:4px 0;border-left-color:var(--gold);">
+        <h3 style="font-size:0.85em;color:var(--gold-light);">💡 つまり</h3>
+        <p class="detail">メディア掲載 = サイテーション = <span class="gold">AIに選ばれる</span><br>1本の記事が長期的な広報資産に</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 サイテーション③ 御校に当てはめる -->
+<section data-screen-label="07 サイテーション 3">
+  <div class="slide-header">04-c / 御校のサイテーション現状と可能性</div>
+  <h2>「名古屋の動物専門学校」をAIで検索したら、<span class="gold">今と3年後</span>でどう変わるか</h2>
+  <div class="grid-2">
+    <div class="before-card">
+      <h3>📌 現在(サイテーション:実質ゼロ)</h3>
+      <div class="small gray" style="margin-bottom:4px;">AIへの質問:</div>
+      <div class="small">「名古屋で動物の仕事を目指せる専門学校は?」</div>
+      <div class="ai-bubble ai-bubble-gray" style="margin-top:8px;">
+        「名古屋ECO動物海洋専門学校は、公式サイトによると就職率100%を謳っています。ただし…」
+      </div>
+      <ul class="warn-list small" style="margin-top:6px;">
+        <li>自社HPのみを参照</li>
+        <li>「学校が言っている」情報しかない</li>
+        <li>保護者の信頼を得にくい</li>
+      </ul>
+    </div>
+    <div class="after-card">
+      <h3>🎯 3年後(サイテーション蓄積後)</h3>
+      <div class="small gray" style="margin-bottom:4px;">AIへの質問:</div>
+      <div class="small">「名古屋で動物の仕事を目指せる専門学校は?」</div>
+      <div class="ai-bubble ai-bubble-gold" style="margin-top:8px;">
+        「名古屋ECO動物海洋専門学校は、就職率100%を20年連続達成(中日新聞)。マイクロソフトとのAIプロジェクトで優秀賞を受賞(日経新聞)。トヨタとのSDGs連携でも注目されています。」
+      </div>
+      <ul class="check-list small" style="margin-top:6px;">
+        <li>第三者メディアの報道が引用される</li>
+        <li>保護者が「認められた学校」と判断</li>
+        <li>指名検索(学校名の直接検索)が増加</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 08 保護者ターゲット -->
+<section data-screen-label="08 保護者">
+  <div class="slide-header">05 / 保護者ターゲット戦略</div>
+  <h2>「親御さんにアタックしたい」— その答えは<span class="gold">テレビ・新聞</span>にある</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>保護者世代(40-50代)のメディア信頼度</h3>
+      <table class="compact">
+        <tr><th>メディア</th><th>信頼スコア</th><th></th></tr>
+        <tr><td>NHKテレビ</td><td><strong class="gold">66.7点</strong></td><td>■■■■■■■</td></tr>
+        <tr><td>新聞</td><td><strong class="gold">65.9点</strong></td><td>■■■■■■■</td></tr>
+        <tr><td>民放テレビ</td><td><strong>61.8点</strong></td><td>■■■■■■</td></tr>
+        <tr><td>インターネット</td><td>49.5点</td><td>■■■■■</td></tr>
+      </table>
+      <p class="detail">(新聞通信調査会 2024年) テレビ・新聞はネットより<span class="gold">約17〜18点</span>高い</p>
+    </div>
+    <div class="card">
+      <h3>保護者がメディアを見て感じること</h3>
+      <ul>
+        <li>「テレビに出た=社会に認められた学校」</li>
+        <li>職場・親戚に「テレビで見た」と説明できる</li>
+        <li>「専門学校で大丈夫?」→「テレビの学校」で返せる</li>
+        <li>保護者同士の口コミにも乗りやすい</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:0.95em;">高校生がInstagramで興味 → <span class="gold">保護者がテレビ・新聞でスクリーニング</span> → OC参加 → 入学決定</div>
+    <p class="detail" style="margin-top:6px;">ATARAYOが担うのは「保護者スクリーニング突破」</p>
+  </div>
+</section>
+
+<!-- 09 波及効果 -->
+<section data-screen-label="09 波及効果">
+  <div class="slide-header">06 / メディア掲載の波及効果</div>
+  <h2>1回の取材が、<span class="gold">何層にもわたって広がる</span></h2>
+  <div class="flow-steps">
+    <div class="flow-step"><span class="step-num">STEP 1</span>テレビ放送</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">STEP 2</span>TVerで見逃し配信</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">STEP 3</span>YouTube切り抜き</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">STEP 4</span>SNSで拡散</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">STEP 5</span>AI検索の参照元</div>
+  </div>
+  <div class="grid-2">
+    <div class="card-blue">
+      <h3>テレビの波及データ</h3>
+      <ul>
+        <li>TVer 月間ユーザー:<span class="gold">4,120万人</span>(2025年過去最高)</li>
+        <li>TVer 月間再生:5.8億回</li>
+        <li>YouTube+テレビ組み合わせ:+10.3%リーチ増</li>
+      </ul>
+      <p class="detail">1回の取材が<span class="gold">長期的な広報資産</span>になる</p>
+    </div>
+    <div class="card">
+      <h3>新聞の波及データ</h3>
+      <ul>
+        <li>Yahoo!ニュース 月間PV:225億 / MAU:8,500万人</li>
+        <li>中日新聞 → Yahoo!ニュース → <span class="gold">全国の保護者に届く</span></li>
+        <li>新聞社WebはGoogleドメイン評価が高い</li>
+      </ul>
+      <p class="detail">AI検索でも上位表示されやすい</p>
+    </div>
+  </div>
+  <div class="highlight-box" style="margin-top:10px;">
+    <div class="main-message" style="font-size:1em;">広告は予算が続く間だけ。<span class="gold">報道はネット上に記事が残り続ける。</span></div>
+  </div>
+</section>
+
+<!-- 10 広告 vs 報道 -->
+<section data-screen-label="10 広告 vs 報道">
+  <div class="slide-header">07 / 広告とメディア掲載の違い</div>
+  <h2>「学校が言うこと」と「メディアが認めたこと」の差</h2>
+  <table class="compact">
+    <tr><th></th><th>広告(CM・Web広告)</th><th class="gold">メディア掲載(取材・報道)</th></tr>
+    <tr><td>費用</td><td>テレビCM:数百万円〜</td><td class="gold">掲載費ゼロ(PR活動費のみ)</td></tr>
+    <tr><td>信頼性</td><td>「学校が言っていること」</td><td>「メディアが認めたこと」</td></tr>
+    <tr><td>保護者の印象</td><td>「広告を出している学校」</td><td>「取材される学校」</td></tr>
+    <tr><td>AI検索への影響</td><td>低い(参照されにくい)</td><td class="gold">高い(優先参照)</td></tr>
+    <tr><td>持続性</td><td>予算を止めれば消える</td><td class="gold">記事がネット上に残り続ける</td></tr>
+    <tr><td>二次拡散</td><td>なし</td><td>TVer・YouTube・Yahoo!ニュースに波及</td></tr>
+  </table>
+  <div class="highlight-box">
+    <div class="small">📊 東海地区テレビスポット15秒 = 約4〜12.5万円</div>
+    <div class="main-message" style="margin-top:6px;">テレビ取材5分(300秒)の広告換算価値 = <span class="gold">約300万円相当</span></div>
+    <p class="detail" style="margin-top:4px;">掲載費ゼロ、かつ広告より信頼性が高い</p>
+  </div>
+</section>
+
+<!-- 11 PESO -->
+<section data-screen-label="11 PESO">
+  <div class="slide-header">08 / PESOモデル分析</div>
+  <h2>御校のメディア活用状況 — <span class="gold">P・S・Oは動いている。Eが空白。</span></h2>
+  <div class="grid-2">
+    <div class="peso-card peso-active">
+      <h3>P — Paid(広告・有料露出) <span class="badge-blue">稼働中</span></h3>
+      <ul>
+        <li>TikTokピクセル実装済み</li>
+        <li>進学情報サイトに掲出</li>
+      </ul>
+    </div>
+    <div class="peso-card peso-empty">
+      <h3 class="danger">E — Earned(第三者報道) <span class="badge-red">最大の空白</span></h3>
+      <ul>
+        <li>プレスリリース配信:実質ゼロ</li>
+        <li>メディア取材獲得:実質ゼロ</li>
+        <li><span class="danger">← ここだけがまだ手つかず</span></li>
+      </ul>
+    </div>
+    <div class="peso-card peso-active">
+      <h3>S — Shared(SNS・口コミ) <span class="badge-blue">稼働中</span></h3>
+      <ul>
+        <li>Instagram 愛知動物系1位(3,298人)</li>
+        <li>X・TikTok・YouTube・LINE 運用中</li>
+      </ul>
+    </div>
+    <div class="peso-card peso-active">
+      <h3>O — Owned(自社メディア) <span class="badge-blue">稼働中</span></h3>
+      <ul>
+        <li>ブログ月25件以上・累計245記事</li>
+        <li>PR素材の宝庫</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:1em;">ATARAYOが担うのは「<span class="gold">E — Earned Mediaの空白</span>を埋めること」だけ。</div>
+    <p class="detail" style="margin-top:4px;">SNS運用・広告・ブログには入りません。今抜けているピースを外から補います。</p>
+  </div>
+</section>
+
+<!-- 12 ブログ245記事 -->
+<section data-screen-label="12 PR素材">
+  <div class="slide-header">09 / PR素材の発掘</div>
+  <h2>すでにある「宝」を<span class="gold">プレスリリース</span>に変えるだけ</h2>
+  <table class="compact">
+    <tr><th>ネタ</th><th>ターゲットメディア</th><th>PRポテンシャル</th></tr>
+    <tr><td>マイクロソフト×AI×動物園 優秀賞</td><td>日経新聞・EdTechメディア・東海テレビ</td><td class="gold">★★★ 最優先</td></tr>
+    <tr><td>ウミガメ産卵地保全×トヨタHOURYU</td><td>中日新聞SDGs面・CBC・環境系メディア</td><td class="gold">★★★</td></tr>
+    <tr><td>保護猫2匹の譲渡活動・命の教育</td><td>中日新聞地域面・NHK名古屋</td><td class="gold">★★★</td></tr>
+    <tr><td>栄の街中に200種の動物がいる学校</td><td>東海テレビ・CBC・メ〜テレ(テレビロケ)</td><td class="gold">★★★</td></tr>
+    <tr><td>就職率100%・20年連続</td><td>中日新聞教育面・リセマム</td><td>★★</td></tr>
+    <tr><td>4年制(高度専門士)のキャリア設計</td><td>日経・読売教育欄</td><td>★★</td></tr>
+  </table>
+  <div class="bottom-note">すべてブログに書かれている内容。「新しいことをする」必要はなく、<span class="gold">「届けること」を加えるだけ。</span></div>
+</section>
+
+<!-- 13 強み -->
+<section data-screen-label="13 御校の強み">
+  <div class="slide-header">10 / 御校の強み</div>
+  <h2>今すぐ始めれば、<span class="gold">3年間「先行者」</span>でいられる</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>📱 Instagram 愛知動物系フォロワー1位</h3>
+      <p class="detail">3,298人 — 高校生認知の土台はすでにある</p>
+    </div>
+    <div class="card">
+      <h3>🌊 海洋系コースは愛知県で唯一</h3>
+      <p class="detail">競合がいない独自ポジション。「海洋系＝名古屋ECO」の一択</p>
+    </div>
+    <div class="card">
+      <h3>🎓 4年制（高度専門士）あり</h3>
+      <p class="detail">大学卒と同等の学歴。保護者への訴求力が高い</p>
+    </div>
+    <div class="card">
+      <h3>✍️ ブログ月25件・累計245記事</h3>
+      <p class="detail">PR素材の宝庫がすでに揃っている</p>
+    </div>
+    <div class="card">
+      <h3>🏢 滋慶グループ 全国5,800施設</h3>
+      <p class="detail">就職先ネットワークの厚さ — 就職率100%・20年連続の土台</p>
+    </div>
+    <div class="card-danger">
+      <h3>📣 Earned Media（メディア掲載）だけが空白</h3>
+      <p class="detail">強みは揃っている。足りないのは「外に届ける仕組み」のみ</p>
+    </div>
+  </div>
+  <div class="highlight-box" style="padding:10px 18px;margin-top:10px;">
+    <div class="main-message" style="font-size:0.95em;">メディアとの関係構築には時間がかかる。<span class="gold">今始めた学校が「先行者」になれる。</span></div>
+  </div>
+</section>
+
+<!-- 14 Before/After -->
+<section data-screen-label="14 3年後">
+  <div class="slide-header">11 / 目指す姿</div>
+  <h2>ATARAYOとご一緒した<span class="gold">3年後</span>、何が変わっているか</h2>
+  <div class="grid-2">
+    <div class="before-card">
+      <h3 style="font-size:1.05em;">📍 現在の状態</h3>
+      <ul class="small">
+        <li>良い取り組みがブログで完結、世に届かない</li>
+        <li>先生が広報・入試・教育を兼務して疲弊</li>
+        <li>保護者が調べても学校の自己紹介しか出ない</li>
+        <li>「メディアに取り上げてほしい」が手段・時間なし</li>
+        <li>志願者が「知らなかった」で他校に流れる</li>
+      </ul>
+    </div>
+    <div class="after-card">
+      <h3 style="font-size:1.05em;">🎯 3年後の状態</h3>
+      <ul class="small">
+        <li>「海洋系といえば名古屋ECO」とAI・保護者に第一想起</li>
+        <li>先生はセリングに集中。広報は外から仕組みで回る</li>
+        <li>第三者メディアの報道記事が複数ヒットする</li>
+        <li>「ネタがあれば名古屋ECOに聞こう」と取材が来る</li>
+        <li>競合校より「名前が通っている学校」になっている</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-note center">このGAPを埋めるのが、私たちATARAYOの仕事です。</div>
+</section>
+
+<!-- 15 役割分担 -->
+<section data-screen-label="15 役割分担">
+  <div class="slide-header">12 / 役割分担</div>
+  <h2>ATARAYOがやること / 御校にお願いすること</h2>
+  <div class="grid-2">
+    <div class="card-blue">
+      <h3>👩‍🏫 御校が担う領域(今のまま)</h3>
+      <ul>
+        <li>学生・受験生との対面コミュニケーション</li>
+        <li>授業・実習の企画と実施</li>
+        <li>日々のブログ・SNS更新</li>
+        <li>オープンキャンパス・進路ガイダンス</li>
+      </ul>
+      <p class="detail">← 先生にしかできない、最も価値ある仕事</p>
+    </div>
+    <div class="card">
+      <h3>🚢 ATARAYOが外から担う領域</h3>
+      <ul>
+        <li>ブログ記事からPR素材を発掘・プレスリリース化</li>
+        <li>記者・ディレクターへの個別メディアアプローチ</li>
+        <li>広報戦略の設計と月次効果報告</li>
+        <li>取材対応サポート(当日同席も可能)</li>
+      </ul>
+      <p class="detail">← 学校内では時間が作れない、外部専門家の仕事</p>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:1em;">御校に必要な作業:<span class="gold">月1〜2回の確認メール返信 + 月次定例MTG 60分</span>のみ</div>
+  </div>
+</section>
+
+<!-- 16 経営投資 -->
+<section data-screen-label="16 経営投資">
+  <div class="slide-header">13 / 広報と経営</div>
+  <h2>広報は「<span class="gold">経営投資</span>」である理由</h2>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>経営者が持つ問い</h3>
+        <p class="small" style="font-style:italic;">「広報に費用をかけて、志願者数にどう影響するのか見えにくい」</p>
+        <p class="detail">→ すべての学校経営層が感じていること</p>
+      </div>
+      <div class="card">
+        <h3>ATARAYOの答え</h3>
+        <p class="small">広報の成果を<span class="gold">経営の言葉</span>で報告することにこだわります。</p>
+        <p class="detail">インプット→アウトプット→アウトカムの3層で可視化</p>
+      </div>
+    </div>
+    <div>
+      <div class="step-item"><span class="num">①</span> 課題認識 — 今どんな問題が起きているか</div>
+      <div class="step-item"><span class="num">②</span> 打ち手の妥当性 — この施策は本当に効くか</div>
+      <div class="step-item"><span class="num">③</span> 未来期待値 — 何がどう変わるか</div>
+      <div class="step-item"><span class="num">④</span> 優先順位 — 今これをやるべきか</div>
+    </div>
+  </div>
+  <div class="bottom-note">広報の最終ゴールは「<span class="gold">行動変容</span>」。「知ってもらう」だけでなく「この学校に行きたい」「取材したい」を引き出す。</div>
+</section>
+
+<!-- 17 ATARAYO自己紹介 -->
+<section data-screen-label="17 ATARAYO">
+  <div class="slide-header">14 / 私たちについて</div>
+  <h2>なぜATARAYOが御校をサポートできるのか</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>① 事業内容</h3>
+      <ul class="small">
+        <li>専門学校の広報支援・ブランディング</li>
+        <li>プレスリリース制作・メディアアプローチ</li>
+        <li>広報戦略設計・中長期ロードマップ策定</li>
+        <li>入試広報の「引き算」アドバイス</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>② 主な支援先(滋慶学園グループとの実績)</h3>
+      <ul class="small">
+        <li>滋慶学園グループ各校</li>
+        <li>TSM(東京スクール・オブ・ミュージック)</li>
+        <li>福岡ECO動物海洋専門学校</li>
+        <li>ダンスアカデミー等</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>③ 代表 関口陽介</h3>
+      <ul class="small">
+        <li>キッザニア東京 立ち上げ参画</li>
+        <li>滋慶学園グループと<span class="gold">20年以上</span>の関係</li>
+        <li>学校で現在も授業担当</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>④ 担当 橋本花織(愛知県出身)</h3>
+      <ul class="small">
+        <li>愛知県出身・地元メディア事情に精通</li>
+        <li>元小学校教員12年</li>
+        <li>学校広報4年のキャリア</li>
+        <li><span class="gold">東海テレビ・中日新聞・CBCの切り口を熟知</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-note">※具体的なメディア掲載実績・校名は個別にお伝えします(守秘義務のある情報は除きます)</div>
+</section>
+
+<!-- 18 航海フレーム -->
+<section data-screen-label="18 航海フレーム">
+  <div class="slide-header">15 / ATARAYOのアプローチ</div>
+  <h2>「船を出す前に、<span class="gold">羅針盤と地図</span>を整える」</h2>
+  <div class="grid-3">
+    <div class="card">
+      <h3 style="font-size:1.4em;">🧭 羅針盤</h3>
+      <div class="gold-light small" style="margin-bottom:6px;">ブランドアイデンティティ</div>
+      <p class="detail">「この学校は何を大切にするか」機能的価値+情緒的価値の言語化</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:1.4em;">🗺️ 地図</h3>
+      <div class="gold-light small" style="margin-bottom:6px;">広報戦略</div>
+      <p class="detail">KGI(目的地) → KPI(経由地) → 日々のアクション(航路図)</p>
+    </div>
+    <div class="card">
+      <h3 style="font-size:1.4em;">⛵ 船</h3>
+      <div class="gold-light small" style="margin-bottom:6px;">個々の施策</div>
+      <p class="detail">プレスリリース・メディアアプローチ等の実行手段</p>
+    </div>
+  </div>
+  <div class="danger-box">
+    <strong>よくある失敗:船(施策)だけある状態</strong><br>
+    → 羅針盤・地図なしにプレスリリースを出しても効果が薄い<br>
+    → ATARAYOは<span class="gold">「設計」から</span>一緒に行います
+  </div>
+</section>
+
+<!-- 19 3プラン比較 -->
+<section data-screen-label="19 プラン比較">
+  <div class="slide-header">16 / プランご提案</div>
+  <h2>3つのプランからお選びください</h2>
+  <div class="grid-3">
+    <div class="plan-card plan-ume">
+      <h3>海図プラン(梅)</h3>
+      <div class="price">15万円(単発)</div>
+      <div class="tagline">「まず現状を把握したい方へ」</div>
+      <ul>
+        <li>広報力診断レポート(A4・20〜30P)</li>
+        <li>プレスリリース下書き 1本</li>
+        <li>フィードバックMTG(90分)</li>
+      </ul>
+    </div>
+    <div class="plan-card plan-take">
+      <h3>伴走プラン(竹)</h3>
+      <div class="price" style="color:#9BD0F0;">月額20万円〜(3ヶ月〜)</div>
+      <div class="tagline">「実際にメディアを動かしたい方へ」</div>
+      <ul>
+        <li>プレスリリース 月1本〜</li>
+        <li>メディアアプローチ</li>
+        <li>月次定例MTG(60分)</li>
+        <li>取材対応サポート</li>
+      </ul>
+    </div>
+    <div class="plan-card plan-matsu">
+      <h3 class="gold-light">自走プラン(松)</h3>
+      <div class="price">月額30万円〜(年間契約推奨)</div>
+      <div class="tagline">「3年後に自走できる学校になりたい方へ」</div>
+      <ul>
+        <li>伴走プランの全内容+</li>
+        <li>ブランドアイデンティティ設計</li>
+        <li>中長期広報戦略策定</li>
+        <li>3年後の広報マニュアル納品</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-note">まず<span class="gold">海図プランで体験してから継続を判断</span>いただく形もウェルカムです。</div>
+</section>
+
+<!-- 20 海図プラン -->
+<section data-screen-label="20 海図プラン">
+  <div class="slide-header">17 / 海図プラン詳細</div>
+  <h2>海図プラン — 「<span class="gold">まず外から見てみる</span>」</h2>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>料金</h3>
+        <p style="font-size:1.3em;" class="gold-light"><strong>15万円(単発)</strong></p>
+      </div>
+      <div class="card">
+        <h3>納品物</h3>
+        <ul class="small">
+          <li>広報力診断レポート(A4・20〜30ページ)</li>
+          <li>プレスリリース下書き 1本(最優先ネタで)</li>
+          <li>フィードバックMTG(90分)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3>このプランをお勧めする方</h3>
+      <ul class="small">
+        <li>外部から現状を客観的に把握したい</li>
+        <li>上層部に広報投資の必要性を数字で説明したい</li>
+        <li>ATARAYOとの仕事を体験してから判断したい</li>
+      </ul>
+      <p class="detail" style="margin-top:14px;">「一番リスクが低い始め方」です。海図プランを経て継続支援に進む形もまったく構いません。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 21 伴走プラン -->
+<section data-screen-label="21 伴走プラン">
+  <div class="slide-header">18 / 伴走プラン詳細</div>
+  <h2>伴走プラン — 毎月、<span class="gold">実際にメディアを動かす</span></h2>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>料金</h3>
+        <p style="font-size:1.3em;" class="gold-light"><strong>月額20万円(3ヶ月〜)</strong></p>
+      </div>
+      <div class="card">
+        <h3>月次サイクル</h3>
+        <ul class="small">
+          <li>月初:ブログ確認・ネタ選定・承認</li>
+          <li>月中:原稿作成・事実確認メール(1〜2回)</li>
+          <li>月後半:プレスリリース配信・メディアアプローチ</li>
+          <li>月末:定例MTG(60分)振り返り・翌月計画</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3>御校に必要な作業</h3>
+      <ul class="small">
+        <li>月1〜2回 事実確認メールへの返信(5〜10分)</li>
+        <li>月次定例MTG 60分</li>
+        <li>取材依頼が来た場合の受諾判断</li>
+      </ul>
+      <div class="danger-box" style="margin-top:14px;font-size:0.82em;">
+        ⚠ 1〜3本目はメディアとの関係構築期間。<span class="gold">6ヶ月以上のお付き合いを推奨</span>しています。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 22 自走プラン -->
+<section data-screen-label="22 自走プラン">
+  <div class="slide-header">19 / 自走プラン詳細</div>
+  <h2>自走プラン — <span class="gold">3年後、ATARAYOなしで動ける学校へ</span></h2>
+  <div class="grid-2">
+    <div>
+      <div class="card">
+        <h3>料金</h3>
+        <p style="font-size:1.3em;" class="gold-light"><strong>月額30万円(年間契約推奨)</strong></p>
+      </div>
+      <div class="card">
+        <h3>年次コンテンツ</h3>
+        <ul class="small">
+          <li><span class="gold">Year1</span>:ブランドアイデンティティ設計・中長期戦略策定</li>
+          <li><span class="gold">Year2</span>:広報担当の先生へのレクチャー・組織への浸透</li>
+          <li><span class="gold">Year3</span>:上層部向けセミナー・広報マニュアル一式納品</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <h3>このプランの本質</h3>
+      <p class="small">3年後に<strong class="gold">外部依存をゼロ</strong>にすること。</p>
+      <p class="detail" style="margin-top:8px;">ATARAYOがいなくなっても御校が自前で広報を回せる状態をつくる。長期的に見ると外注コストが下がり、投資対効果が最も高いプランです。</p>
+      <p class="detail" style="margin-top:6px;">月10万円の差 = ブランド設計+戦略立案の費用</p>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:1em;">Year3末の目標:<span class="gold">ATARAYOがいなくなっても回る広報の仕組み</span></div>
+  </div>
+</section>
+
+<!-- 23 月次スケジュール -->
+<section data-screen-label="23 月次">
+  <div class="slide-header">20 / 月次スケジュール</div>
+  <h2>伴走プランの<span class="gold">1ヶ月の流れ</span></h2>
+  <div class="flow-steps">
+    <div class="flow-step"><span class="step-num">月初</span>ブログ確認・ネタ選定</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">承認</span>御校と共有・承認</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">月中</span>原稿作成・事実確認</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">月後半</span>配信・メディアアプローチ</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step"><span class="step-num">月末</span>定例MTG・翌月計画</div>
+  </div>
+  <h3 style="margin-top:24px;font-size:1em;color:var(--gold-light);">先生の作業はこれだけ</h3>
+  <div class="grid-3">
+    <div class="card">
+      <h3>📧 事実確認メール</h3>
+      <p class="detail">月1〜2回の返信(各5〜10分)</p>
+    </div>
+    <div class="card">
+      <h3>📅 月次定例MTG</h3>
+      <p class="detail">60分のみ</p>
+    </div>
+    <div class="card">
+      <h3>📞 取材依頼</h3>
+      <p class="detail">受諾判断のみ(対応サポート付き)</p>
+    </div>
+  </div>
+</section>
+
+<!-- 24 効果測定 -->
+<section data-screen-label="24 効果測定">
+  <div class="slide-header">21 / 効果測定</div>
+  <h2>広報の成果を「<span class="gold">経営の言葉</span>」で報告します</h2>
+  <div class="layer layer-outcome">
+    <h3>🎯 アウトカム(経営直結・上層部への報告指標)</h3>
+    <p>「海洋系=名古屋ECO」の第一想起 / 指名検索数増加 / OC来場者の質変化 / 志願者数</p>
+  </div>
+  <div class="layer layer-output">
+    <h3>📊 アウトプット(担当者への報告指標)</h3>
+    <p>メディア掲載件数 / Web流入数増加 / SNSシェア数</p>
+  </div>
+  <div class="layer layer-input">
+    <h3>⚙️ インプット(活動量の記録)</h3>
+    <p>プレスリリース配信数 / 記者アプローチ数 / MTG実施数</p>
+  </div>
+  <div class="highlight-box" style="margin-top:12px;">
+    <div class="main-message" style="font-size:1em;">経営層へは<span class="gold">アウトカム</span>を報告。担当の先生にはインプットを報告。</div>
+    <p class="detail" style="margin-top:4px;">標準的な時間軸:3〜6ヶ月でアウトプット、1年でアウトカムが見えてくる</p>
+  </div>
+</section>
+
+<!-- 25 ロードマップ -->
+<section data-screen-label="25 ロードマップ">
+  <div class="slide-header">22 / 3年ロードマップ</div>
+  <h2>自走プラン — <span class="gold">3年間の全体設計</span></h2>
+  <div class="grid-3">
+    <div class="year-card year-gold">
+      <h3>Year 1 — 羅針盤と地図をつくる</h3>
+      <ul class="small">
+        <li>ブランドアイデンティティ設計</li>
+        <li>中長期広報戦略策定</li>
+        <li>メディアリスト構築・初動アプローチ</li>
+        <li>プレスリリース実動開始(月1本〜)</li>
+      </ul>
+    </div>
+    <div class="year-card year-accent">
+      <h3>Year 2 — 実行・定着・深化</h3>
+      <ul class="small">
+        <li>広報担当の先生へのレクチャー</li>
+        <li>メディアキャラバン(5〜8社訪問)</li>
+        <li>KPIの四半期レビュー</li>
+        <li>組織への広報文化の浸透</li>
+      </ul>
+    </div>
+    <div class="year-card year-white">
+      <h3>Year 3 — 自走・引き継ぎ</h3>
+      <ul class="small">
+        <li>広報マニュアル一式納品</li>
+        <li>ATARAYOなしで自走できる状態</li>
+        <li>外注コストをゼロへ</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:1em;">Year3末のゴール:<span class="gold">ATARAYOがいなくなっても回る広報の仕組み</span></div>
+  </div>
+</section>
+
+<!-- 26 最初のアクション -->
+<section data-screen-label="26 最初のアクション">
+  <div class="slide-header">23 / 最初のアクション</div>
+  <h2>今日ご一緒に決めたい:<span class="gold">最初のプレスリリース、どれから始めますか?</span></h2>
+  <p class="detail" style="margin-bottom:8px;">候補はすべて、すでにブログにある素材です</p>
+  <div class="grid-2">
+    <div class="card" style="border-left-width:6px;">
+      <h3>① マイクロソフト×AI×動物園 優秀賞 <span class="badge">最優先</span></h3>
+      <p class="detail">テック×教育の先端事例。日経・EdTechメディアが食いつく切り口。今すぐ配信可能。</p>
+    </div>
+    <div class="card">
+      <h3>② ウミガメ×トヨタ SDGs連携</h3>
+      <p class="detail">中日新聞SDGs面と環境系メディアへ同時アプローチ。産卵シーズン(6〜7月)が好機。</p>
+    </div>
+    <div class="card">
+      <h3>③ 保護猫2匹の譲渡活動・命の教育</h3>
+      <p class="detail">保護猫ブーム×命の授業。中日新聞地域面に強く刺さる。</p>
+    </div>
+    <div class="card">
+      <h3>④ 栄の街中に200種の動物がいる学校</h3>
+      <p class="detail">映像になりやすい強いネタ。東海テレビ・CBC・メ〜テレへのロケ企画として持ち込める。</p>
+    </div>
+  </div>
+  <div class="bottom-note">今日の質疑で「<span class="gold">どれから始めるか</span>」のご意向をお聞きできれば幸いです。</div>
+</section>
+
+<!-- 27 FAQ -->
+<section data-screen-label="27 FAQ">
+  <div class="slide-header">24 / よくあるご質問</div>
+  <h2>FAQ</h2>
+  <table class="compact faq-table">
+    <tr><th>Q</th><th>A</th></tr>
+    <tr><td>取材が来なかった場合は?</td><td>配信数・アプローチ数・取材数の3段階で評価。1〜3本目は関係構築期間で、4本目以降から動きが出るのが経験上の感覚値です。</td></tr>
+    <tr><td>先生の工数はどれくらい?</td><td>月1〜2回の確認メール(各5〜10分)と月次定例MTG 60分のみ。</td></tr>
+    <tr><td>契約期間の縛りは?</td><td>伴走は3ヶ月〜。自走は年間推奨。成果が出る前に終わることを防ぐため6ヶ月以上を推奨。</td></tr>
+    <tr><td>まず海図プランで試せる?</td><td>もちろんです。最もリスクが低い始め方。体験してから継続を判断いただく形もウェルカムです。</td></tr>
+    <tr><td>SNS運用はやってもらえる?</td><td>SNS運用はATARAYOの専門外です。ブログ→Earned Mediaのパイプライン構築が私たちの専門です。</td></tr>
+    <tr><td>費用の支払いタイミングは?</td><td>月払い。契約書締結後に初回請求。翌月から月末締め翌月払い。</td></tr>
+  </table>
+</section>
+
+<!-- 28 次のステップ -->
+<section data-screen-label="28 次のステップ">
+  <div class="slide-header">25 / まとめ・次のステップ</div>
+  <h2>次のステップ</h2>
+  <div class="highlight-box" style="padding:24px;">
+    <div class="main-message" style="font-size:1.4em;">御校の宝を、学校の外に届けるお手伝いをさせてください</div>
+  </div>
+  <div class="flow-steps">
+    <div class="flow-step" style="font-size:0.85em;padding:14px;"><span class="step-num">今日</span>ご提案のご検討・ご質問をお聞かせください</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step" style="font-size:0.85em;padding:14px;"><span class="step-num">プラン決定後</span>キックオフMTG(90分)で方向性を確認</div>
+    <div class="flow-arrow">▶</div>
+    <div class="flow-step" style="font-size:0.85em;padding:14px;border-width:2px;background:rgba(201,168,76,0.15);"><span class="step-num">翌月〜</span>プレスリリース第1号を配信・メディアへGO</div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3>📮 ご連絡先</h3>
+      <p class="small">担当:橋本花織<br>k.hashimoto@atarayo-inc.com<br>ご質問はメール・チャットでいつでも</p>
+    </div>
+    <div class="card">
+      <h3>📋 今日ご確認いただきたいこと</h3>
+      <ul class="small">
+        <li>最初のプレスリリースネタ(①〜④)どれから始めるか</li>
+        <li>ご興味のあるプランの確認</li>
+        <li>社内でのご検討スケジュール感</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-note center">今月中にご決定いただければ来月中に<span class="gold">初回プレスリリース配信が可能</span>です。</div>
+</section>
+
+<!-- APPENDIX -->
+<section data-screen-label="29 APPENDIX">
+  <div class="slide-header">APPENDIX</div>
+  <h2>参考:18歳人口の推移と専門学校が直面する構造変化</h2>
+  <div class="grid-2">
+    <div class="card">
+      <h3>18歳人口の推移</h3>
+      <table class="compact">
+        <tr><td>2024年</td><td>約110万人</td><td>—</td></tr>
+        <tr><td>2030年</td><td>約100万人</td><td class="danger">▲9%</td></tr>
+        <tr><td>2040年</td><td>約83万人</td><td class="danger">▲25%</td></tr>
+        <tr><td>2050年</td><td>約75万人</td><td class="danger">▲32%</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3>専門学校が直面する構造変化</h3>
+      <ul class="small">
+        <li>志願者の絶対数が減少するのは不可避</li>
+        <li>「語られている学校」が選ばれる傾向が強まる</li>
+        <li>ブランド先行投資が勝敗を分ける</li>
+        <li>専門学校の付加価値訴求が重要</li>
+      </ul>
+    </div>
+  </div>
+  <div class="highlight-box">
+    <div class="main-message" style="font-size:1em;"><span class="gold">今、ブランドを築いた学校が10年後に生き残る。</span></div>
+    <p class="detail" style="margin-top:4px;">「引き算と戦略」で少ないリソースから最大の成果を出す仕組みが今から必要</p>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  width: 1200,
+  height: 675,
+  margin: 0,
+  controls: true,
+  progress: true,
+  hash: true,
+  slideNumber: 'c/t',
+  transition: 'fade',
+  transitionSpeed: 'fast',
+  keyboard: true,
+});
+</script>
+</body>
+</html>
