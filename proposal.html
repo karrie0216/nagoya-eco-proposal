@@ -35,12 +35,21 @@ html,body{background:var(--navy);}
 .reveal section.title-slide{padding:60px 80px;}
 .slide-number{color:var(--gray);}
 
+/* core UI parts (per spec) */
 .card{background:var(--navy-mid);border-left:4px solid var(--gold);border-radius:6px;padding:12px 16px;margin:6px 0;}
 .card-blue{background:var(--navy-mid);border-left:4px solid var(--accent);border-radius:6px;padding:12px 16px;margin:6px 0;}
 .card-danger{background:rgba(232,93,93,0.08);border-left:4px solid var(--danger);border-radius:6px;padding:12px 16px;margin:6px 0;}
-.card h3,.card-blue h3,.card-danger h3{font-size:1em;margin-bottom:4px;color:var(--gold-light);}
+.card h3,.card-blue h3,.card-danger h3{font-size:1em;margin-bottom:6px;color:var(--gold-light);}
 .card-blue h3{color:#9BD0F0;}
 .card-danger h3{color:#F2A0A0;}
+
+/* カード内のp/div テキスト → 補足として視覚的に軽く */
+.card > p, .card-blue > p, .card-danger > p,
+.card > div.sub, .card-blue > div.sub, .card-danger > div.sub {
+  font-size: 0.88em;
+  color: var(--gray);
+  line-height: 1.5;
+}
 
 .quote-box{background:rgba(201,168,76,0.08);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 18px;font-style:italic;font-size:0.95em;color:var(--gold-light);margin:6px 0;line-height:1.5;}
 .quote-source{font-size:0.82em;color:var(--gray);font-style:normal;margin-top:4px;}
@@ -153,10 +162,6 @@ table.compact th,table.compact td{padding:6px 9px;}
 
 .check-list li::before{content:"✅";color:var(--gold);}
 .warn-list li::before{content:"⚠";color:var(--danger);}
-
-/* キーワードと補足の2層 */
-.kw{font-size:1em;font-weight:700;color:var(--white);}
-.detail{font-size:0.82em;color:var(--gray);line-height:1.45;margin-top:2px;}
 </style>
 </head>
 <body>
@@ -219,7 +224,7 @@ table.compact th,table.compact td{padding:6px 9px;}
   </div>
   <div class="highlight-box">
     <div class="main-message">「御校には素材がある。足りないのは『届ける仕組み』だけです。」</div>
-    <div class="detail" style="margin-top:6px;text-align:center;">— ブログ245記事全件を読んで行き着いた結論</div>
+    <div class="gray" style="margin-top:6px;">— ブログ245記事全件を読んで行き着いた結論</div>
   </div>
 </section>
 
@@ -242,7 +247,7 @@ table.compact th,table.compact td{padding:6px 9px;}
       <ul>
         <li>ChatGPT・Gemini・Perplexityで「どの学校がいい?」と質問</li>
         <li>AI検索から学校情報を得る高校生・保護者が急増</li>
-        <li class="detail" style="list-style:none;padding-left:0;">国内AI利用者数:2026年末に3,175万人見込み(MM総研)</li>
+        <li>国内AI利用者数:2026年末に3,175万人見込み(MM総研)</li>
         <li><span class="gold-bold">⭐「AI検索に選ばれる学校」と「そうでない学校」に二極化する</span></li>
       </ul>
     </div>
@@ -258,7 +263,7 @@ table.compact th,table.compact td{padding:6px 9px;}
 <section data-screen-label="05 サイテーション 1">
   <div class="slide-header">04-a / サイテーション(外部言及)を理解する</div>
   <h2>AIに選ばれるカギは「<span class="gold">誰かに語ってもらうこと</span>」</h2>
-  <div class="highlight-box" style="text-align:left;margin-bottom:10px;">
+  <div class="highlight-box" style="text-align:left;">
     <div style="font-size:0.78em;color:var(--gray);margin-bottom:4px;">サイテーション(Citation)とは:</div>
     <div class="main-message" style="font-size:1em;">外部のサイト・メディア・口コミサービスで「学校の名前・取り組みが言及・引用されている状態」のこと</div>
   </div>
@@ -291,10 +296,12 @@ table.compact th,table.compact td{padding:6px 9px;}
         <div class="trust-bar-label">Web広告</div>
         <div class="trust-bar-bg"><div class="trust-bar-fill trust-bar-web" style="width:47%;">47%</div></div>
       </div>
-      <div class="detail" style="margin-top:6px;">報道記事は広告の<span class="gold">約1.5倍</span>の信頼度</div>
+      <div class="tiny gray" style="margin-top:6px;">報道記事は広告の<span class="gold">約1.5倍</span>の信頼度</div>
     </div>
   </div>
-  <div class="bottom-note">同じ「名古屋ECOのすごい取り組み」でも、学校が自分で言うより、新聞やテレビが取り上げた方が<span class="gold">保護者・AI双方に圧倒的に届く</span>。</div>
+  <div class="bottom-note">
+    つまり:同じ「名古屋ECOのすごい取り組み」でも、学校が自分で言うより、新聞やテレビが取り上げた方が<span class="gold">保護者・AI双方に圧倒的に届く</span>。
+  </div>
 </section>
 
 <!-- 06 サイテーション② AI検索フロー -->
@@ -318,15 +325,15 @@ table.compact th,table.compact td{padding:6px 9px;}
     <div>
       <div class="card-blue" style="padding:12px 14px;margin:4px 0;">
         <h3 style="font-size:0.85em;">📊 Brightedge(2024)</h3>
-        <p class="detail">AI回答の<span class="gold-bold">約63%</span>は検索上位10位以外のサイトを引用<br>→ SEO対策だけでは不十分</p>
+        <p class="small" style="font-size:0.72em;">AI回答の<span class="gold-bold">約63%</span>は検索上位10位以外のサイトを引用 → SEO対策だけでは不十分</p>
       </div>
       <div class="card-blue" style="padding:12px 14px;margin:4px 0;">
         <h3 style="font-size:0.85em;">📊 AI検索からのWeb流入</h3>
-        <p class="detail">2025年1月比で<span class="gold-bold">約145倍増</span>の報告あり<br>(Ahrefs調査)</p>
+        <p class="small" style="font-size:0.72em;">2025年1月比で<span class="gold-bold">約145倍増</span>の報告あり (Ahrefs調査)</p>
       </div>
       <div class="card-blue" style="padding:12px 14px;margin:4px 0;border-left-color:var(--gold);">
         <h3 style="font-size:0.85em;color:var(--gold-light);">💡 つまり</h3>
-        <p class="detail">メディア掲載 = サイテーション = <span class="gold">AIに選ばれる</span><br>1本の記事が長期的な広報資産になります。</p>
+        <p class="small" style="font-size:0.72em;">メディア掲載 = サイテーション = <span class="gold">AIに選ばれる</span>。1本の記事が長期的な広報資産になります。</p>
       </div>
     </div>
   </div>
@@ -364,7 +371,9 @@ table.compact th,table.compact td{padding:6px 9px;}
       </ul>
     </div>
   </div>
-  <div class="bottom-note">ATARAYOの仕事は、「今の状態」を「3年後の状態」に変えること。最短経路が<span class="gold">「メディアに取り上げてもらう仕組み」</span>の構築です。</div>
+  <div class="bottom-note">
+    ATARAYOの仕事は、「今の状態」を「3年後の状態」に変えること。最短経路が<span class="gold">「メディアに取り上げてもらう仕組み」</span>の構築です。
+  </div>
 </section>
 
 <!-- 08 保護者ターゲット -->
@@ -381,7 +390,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <tr><td>民放テレビ</td><td><strong>61.8点</strong></td><td>■■■■■■</td></tr>
         <tr><td>インターネット</td><td>49.5点</td><td>■■■■■</td></tr>
       </table>
-      <div class="detail" style="margin-top:6px;">(新聞通信調査会 2024年) テレビ・新聞はネットより<span class="gold">約17〜18点</span>高い</div>
+      <div class="tiny gray">(新聞通信調査会 2024年) テレビ・新聞はネットより<span class="gold">約17〜18点</span>高い</div>
     </div>
     <div class="card">
       <h3>保護者がメディアを見て感じること</h3>
@@ -394,9 +403,9 @@ table.compact th,table.compact td{padding:6px 9px;}
     </div>
   </div>
   <div class="highlight-box">
-    <div class="detail" style="margin-bottom:4px;">保護者の意思決定フロー</div>
-    <div class="main-message" style="font-size:0.95em;">高校生がInstagramで興味 → <span class="gold">保護者がテレビ・新聞でスクリーニング</span> → 同伴でOC参加 → 入学決定</div>
-    <div class="detail" style="margin-top:6px;">ATARAYOが担うのは、このフローの「保護者スクリーニング突破」</div>
+    <div class="small gray" style="margin-bottom:4px;">保護者の意思決定フロー</div>
+    <div class="main-message" style="font-size:0.95em;">高校生がInstagramで興味 → <span class="gold">保護者がテレビ・新聞でスクリーニング</span> → 同伴でOC参加 → 「ここなら大丈夫」 → 入学決定</div>
+    <div class="small" style="margin-top:6px;">ATARAYOが担うのは、このフローの<span class="gold">「保護者スクリーニング突破」</span>です</div>
   </div>
 </section>
 
@@ -422,7 +431,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>TVer 月間ユーザー:<span class="gold">4,120万人</span>(2025年過去最高)</li>
         <li>TVer 月間再生:5.8億回</li>
         <li>YouTube + テレビの組み合わせ:+10.3%のリーチ増</li>
-        <li>1回の取材が<span class="gold">長期的な広報資産</span>になる</li>
+        <li>富田様:「事前告知ができる」「見逃し再生も使える」<br>→ 1回の取材が<span class="gold">長期的な広報資産</span>になる</li>
       </ul>
     </div>
     <div class="card">
@@ -431,7 +440,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>Yahoo!ニュース 600社・730媒体が記事配信</li>
         <li>Yahoo!ニュース 月間PV:225億 / MAU:8,500万人</li>
         <li>中日新聞 → Yahoo!ニュース → <span class="gold">全国の保護者に届く</span></li>
-        <li>新聞社WebはGoogleドメイン評価が高くAI/検索で上位表示されやすい</li>
+        <li>新聞社WebはGoogleドメイン評価が高い → AI/Google両方で上位表示されやすい</li>
       </ul>
     </div>
   </div>
@@ -454,9 +463,9 @@ table.compact th,table.compact td{padding:6px 9px;}
     <tr><td>二次拡散</td><td>なし</td><td>TVer・YouTube・Yahoo!ニュースに波及</td></tr>
   </table>
   <div class="highlight-box">
-    <div class="detail">📊 広告換算で見ると:東海地区テレビスポット15秒 = 約4〜12.5万円</div>
+    <div class="small">📊 広告換算で見ると:東海地区テレビスポット15秒 = 約4〜12.5万円</div>
     <div class="main-message" style="margin-top:6px;">テレビ取材5分(300秒)の広告換算価値 = <span class="gold">約300万円相当</span></div>
-    <div class="detail" style="margin-top:4px;">掲載費ゼロで実現でき、広告より信頼性が高い</div>
+    <div class="small" style="margin-top:4px;">これが掲載費ゼロで実現できる上に、広告より信頼性が高い</div>
   </div>
   <div class="bottom-note">投資対効果で見れば、戦略的なメディアアプローチは専門学校にとって<span class="gold">最も費用対効果の高い施策</span>です</div>
 </section>
@@ -498,7 +507,7 @@ table.compact th,table.compact td{padding:6px 9px;}
   </div>
   <div class="highlight-box">
     <div class="main-message" style="font-size:1em;">ATARAYOが担うのは「<span class="gold">E — Earned Mediaの空白</span>を埋めること」だけ。</div>
-    <div class="detail" style="margin-top:4px;">SNS運用・広告・ブログには入りません。今抜けているピースを外から補います。</div>
+    <div class="small" style="margin-top:4px;">SNS運用・広告・ブログには入りません。御校のリソースを奪わず、今抜けているピースを外から補います。</div>
   </div>
 </section>
 
@@ -525,27 +534,27 @@ table.compact th,table.compact td{padding:6px 9px;}
   <div class="grid-2">
     <div class="card">
       <h3>📱 Instagram 愛知動物系フォロワー1位</h3>
-      <div class="detail">3,298人のコンテンツ資産。高校生への認知はすでに土台がある。</div>
+      <p>3,298人のフォロワーを持つコンテンツ資産。高校生への認知はすでに土台がある。</p>
     </div>
     <div class="card">
       <h3>🌊 海洋系コースは愛知県で唯一</h3>
-      <div class="detail">競合がいない独自ポジション。「海洋系＝名古屋ECO」の一択を強化できる。</div>
+      <p>競合がいない独自ポジション。「海洋系＝名古屋ECO」の一択を強化できる。</p>
     </div>
     <div class="card">
       <h3>🎓 4年制（高度専門士）あり</h3>
-      <div class="detail">大学卒と同等の学歴。キャリア設計の幅広さを保護者に訴求できる強み。</div>
+      <p>大学卒と同等の学歴。キャリア設計の幅広さを保護者に訴求できる強み。</p>
     </div>
     <div class="card">
       <h3>✍️ ブログ月25件・累計245記事</h3>
-      <div class="detail">PR素材の宝庫がすでに揃っている。新しいことをせずに「届ける」だけでいい。</div>
+      <p>PR素材の宝庫がすでに揃っている。新しいことをせずに「届ける」だけでいい。</p>
     </div>
     <div class="card">
       <h3>🏢 滋慶グループ 全国5,800施設</h3>
-      <div class="detail">就職先ネットワークの厚さは他に類を見ない。就職率100%・20年連続の土台。</div>
+      <p>就職先ネットワークの厚さは他に類を見ない。就職率100%・20年連続の土台。</p>
     </div>
     <div class="card-danger">
       <h3>📣 Earned Media（メディア掲載）だけが空白</h3>
-      <div class="detail">強みはすべて揃っている。足りないのは「外に届ける仕組み」のみ。今が着手のタイミング。</div>
+      <p>強みはすべて揃っている。足りないのは「外に届ける仕組み」のみ。今が着手のタイミング。</p>
     </div>
   </div>
   <div class="highlight-box" style="padding:10px 18px;margin-top:10px;">
@@ -564,7 +573,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>良い取り組みがブログで完結し、世の中に届かない</li>
         <li>先生が広報・入試・教育を全部兼務して疲弊</li>
         <li>保護者が調べても、学校の自己紹介しか出てこない</li>
-        <li>「メディアに取り上げてほしい」と思いつつ、手段・時間がない</li>
+        <li>「メディアに取り上げてほしい」と思いつつ、アプローチする手段・時間がない</li>
         <li>志願者が「知らなかった」で他校に流れている</li>
       </ul>
     </div>
@@ -574,7 +583,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>「海洋系といえば名古屋ECO」とAI検索・保護者の間で第一想起される</li>
         <li>先生はセリング(対面活動)に集中。広報は外から仕組みで回る</li>
         <li>AI/検索すると第三者メディアの報道記事が複数ヒットする</li>
-        <li>「ネタがあれば名古屋ECOに聞こう」と記者から取材が来る</li>
+        <li>記者・ディレクターから「ネタがあれば名古屋ECOに聞こう」と取材が来る</li>
         <li>競合校より「名前が通っている学校」になっている</li>
       </ul>
     </div>
@@ -595,7 +604,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>日々のブログ・SNS更新</li>
         <li>オープンキャンパス・進路ガイダンス</li>
       </ul>
-      <div class="detail" style="margin-top:6px;">← 先生にしかできない、最も価値ある仕事</div>
+      <div class="tiny gray" style="margin-top:6px;">← 先生にしかできない、最も価値ある仕事</div>
     </div>
     <div class="card">
       <h3>🚢 ATARAYOが外から担う領域</h3>
@@ -605,13 +614,13 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>広報戦略の設計と月次効果報告</li>
         <li>取材対応のサポート(当日同席も可能)</li>
       </ul>
-      <div class="detail" style="margin-top:6px;">← 学校内では時間が作れない、外部専門家の仕事</div>
+      <div class="tiny gray" style="margin-top:6px;">← 学校内では時間が作れない、外部専門家の仕事</div>
     </div>
   </div>
   <div class="highlight-box">
     <div class="main-message" style="font-size:1em;">御校の先生に必要な作業:<span class="gold">月1〜2回の事実確認メール返信 + 月次定例MTG 60分</span>のみ</div>
   </div>
-  <div class="bottom-note">先生が書いてくださったブログをATARAYOがメディア向け素材として活用。先生の時間を増やさずに、外部への発信が動き始めます。</div>
+  <div class="bottom-note">先生が書いてくださったブログをATARAYOがメディア向け素材として活用。先生の時間を1分も奪わずに、外部への発信が動き始めます。</div>
 </section>
 
 <!-- 16 経営投資 -->
@@ -623,7 +632,7 @@ table.compact th,table.compact td{padding:6px 9px;}
       <div class="card">
         <h3>経営者が持つ問い</h3>
         <p class="small" style="font-style:italic;">「広報に費用をかけて、志願者数にどう影響するのか見えにくい」</p>
-        <div class="detail">→ これはすべての学校経営層が感じていること</div>
+        <div class="tiny gray">→ これはすべての学校経営層が感じていること</div>
       </div>
       <div class="card">
         <h3>ATARAYOの答え</h3>
@@ -779,7 +788,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>上層部に広報投資の必要性を数字で説明したい</li>
         <li>ATARAYOとの仕事を一度体験してから判断したい</li>
       </ul>
-      <div class="detail" style="margin-top:14px;line-height:1.6;">
+      <div class="gray" style="margin-top:14px;font-size:0.78em;line-height:1.6;">
         「<span class="gold">一番リスクが低い始め方</span>」です。海図プランを経て、継続支援のプランに進んでいただく形もまったく構いません。まず「自校の広報力を外から見る機会」として気軽にご活用ください。
       </div>
     </div>
@@ -813,7 +822,7 @@ table.compact th,table.compact td{padding:6px 9px;}
         <li>月次定例MTG 60分</li>
         <li>取材依頼が来た場合の受諾判断</li>
       </ul>
-      <div class="danger-box" style="margin-top:14px;font-size:0.82em;">
+      <div class="danger-box" style="margin-top:14px;font-size:0.78em;">
         ⚠ 1〜3本目はメディアとの関係構築期間。4本目あたりから動きが出るのが経験上の感覚値。<br>
         <strong class="gold">6ヶ月以上のお付き合いを推奨</strong>しています。
       </div>
@@ -845,7 +854,7 @@ table.compact th,table.compact td{padding:6px 9px;}
       <p style="line-height:1.7;font-size:0.9em;">3年後に<strong class="gold">外部依存をゼロ</strong>にすること。</p>
       <p class="small" style="line-height:1.7;">ATARAYOがいなくなっても、御校が自前で広報を回せる状態をつくる。</p>
       <p class="small" style="line-height:1.7;">長期的に見ると、その後の外注コストが下がり、投資対効果が最も高いプランです。</p>
-      <div class="detail" style="margin-top:4px;">月10万円の差=ブランド設計+戦略立案の費用です。</div>
+      <p class="small gray">月10万円の差=ブランド設計+戦略立案の費用です。</p>
     </div>
   </div>
   <div class="highlight-box">
@@ -948,23 +957,23 @@ table.compact th,table.compact td{padding:6px 9px;}
 <section data-screen-label="26 最初のアクション">
   <div class="slide-header">23 / 最初のアクション</div>
   <h2>今日ご一緒に決めたい:<span class="gold">最初のプレスリリース、どれから始めますか?</span></h2>
-  <div class="detail" style="margin-bottom:8px;">最初のプレスリリース候補 — これらはすべてブログにある素材です</div>
+  <p class="small gray" style="margin-bottom:8px;">最初のプレスリリース候補 — これらはすでにブログにある素材です</p>
   <div class="grid-2">
     <div class="card" style="border-left-width:6px;">
       <h3>① マイクロソフト×AI×動物園 優秀賞 <span class="badge">最優先</span></h3>
-      <div class="detail">テック×教育の先端事例。日経新聞・EdTechメディアが食いつく切り口。今すぐプレスリリース化できます。</div>
+      <p class="small">テック×教育の先端事例。日経新聞・EdTechメディアが食いつく切り口。今すぐプレスリリース化できます。</p>
     </div>
     <div class="card">
       <h3>② ウミガメ×トヨタ SDGs連携</h3>
-      <div class="detail">SDGs×大企業連携。中日新聞SDGs面と環境系メディアへの同時アプローチが可能。産卵シーズン(6〜7月)が好機。</div>
+      <p class="small">SDGs×大企業連携。中日新聞SDGs面と環境系メディアへの同時アプローチが可能。産卵シーズン(6〜7月)が好機。</p>
     </div>
     <div class="card">
       <h3>③ 保護猫2匹の譲渡活動・命の教育</h3>
-      <div class="detail">保護猫ブーム×命の授業。中日新聞地域面に強く刺さる切り口。</div>
+      <p class="small">保護猫ブーム×命の授業。中日新聞地域面に強く刺さる切り口。</p>
     </div>
     <div class="card">
       <h3>④ 栄の街中に200種の動物がいる学校</h3>
-      <div class="detail">映像になりやすい強いネタ。東海テレビ・CBC・メ〜テレへのロケ企画として持ち込めます。</div>
+      <p class="small">映像になりやすい強いネタ。東海テレビ・CBC・メ〜テレへのロケ企画として持ち込めます。</p>
     </div>
   </div>
   <div class="bottom-note">今日の後半の質疑で「<span class="gold">どれから始めるか</span>」のご意向をお聞きできれば幸いです。</div>
