@@ -21,6 +21,8 @@ html,body{background:var(--navy);}
 .reveal{font-family:'Hiragino Kaku Gothic ProN','Meiryo',sans-serif;color:var(--white);font-size:20px;}
 .reveal .slides{text-align:left;}
 .reveal .slides section{padding:22px 44px 16px;height:100%;box-sizing:border-box;background:var(--navy);color:var(--white);overflow:hidden;}
+.reveal .slides section:not(.title-slide){display:flex !important;flex-direction:column !important;justify-content:space-evenly;}
+.reveal .slides section:not(.title-slide)>*{margin-top:0 !important;margin-bottom:0 !important;}
 .reveal h1,.reveal h2,.reveal h3,.reveal h4{color:var(--white);font-family:inherit;text-transform:none;letter-spacing:0;text-align:left;margin:0 0 8px 0;font-weight:700;line-height:1.25;}
 .reveal h2{font-size:1.5em;border-bottom:1px solid rgba(201,168,76,0.3);padding-bottom:7px;margin-bottom:12px;}
 .reveal h2 .gold{color:var(--gold);}
